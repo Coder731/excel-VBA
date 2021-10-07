@@ -1,6 +1,16 @@
 # excel-VBA
 Attempt to export a VBA module, which moves active cell down one square in Excel
 
+## To use
+Copy modules from VBA.txt into Excel Macros
+
+Then use keyboard shortcut Ctrl + d to run macro to move active cell down by one
+
+if this fails click on macro / module named down() to run
+
+## Bugs 
+only works on single digit rows currently
+
 ## References
 ### Export VBA
 [How can I export VBA code to text from de modules?](https://stackoverflow.com/questions/58490045/how-can-i-export-vba-code-to-text-from-de-modules#58490363)
