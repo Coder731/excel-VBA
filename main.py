@@ -1,3 +1,5 @@
+## PART 1:
+
 import win32com.client
 import pandas as pd
 
@@ -17,3 +19,10 @@ for i in workbook.VBProject.VBComponents:
         dict_modules[name] = [text]
 
 df = pd.DataFrame(dict_modules)
+
+## PART 2:
+
+# To get the full text
+module_name = df["module_name"][0]
+#To get by line
+module_text_by_line = module_name.splitlines()
