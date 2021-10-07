@@ -1,0 +1,55 @@
+Sub Macro1()
+'
+' Macro1 Macro
+'
+
+'
+    Range("C3").Select
+End Sub
+
+Sub ActiveCell_Example1()
+
+    Range("A1").Select
+    Range("A1").Value = "Hello"
+ 
+End Sub
+
+Sub ActiveCell_Example2()
+
+    MsgBox ActiveCell.Address
+    live_cell = ActiveCell.Address
+    MsgBox Left(live_cell, 3)
+    cell_2_a = Left(live_cell, 3)
+    cell_2_b = Right(live_cell, 1)
+    cell_2_b_as_num = CLng(cell_2_b)
+    cell_2_b_as_num_inc_num = cell_2_b_as_num + 1
+    cell_2_b_as_num_inc_num_str = CStr(cell_2_b_as_num_inc_num)
+    recombine_cell_ref = cell_2_a & cell_2_b_as_num_inc_num_str
+    MsgBox recombine_cell_ref
+    Range(recombine_cell_ref).Select
+    
+End Sub
+
+Sub down()
+
+    live_cell = ActiveCell.Address
+    
+    
+    
+    cell_2_a = Left(live_cell, 3)
+    
+    cell_2_b = Right(live_cell, 1)
+    
+    
+    cell_2_b_as_num = CLng(cell_2_b)
+    cell_2_b_as_num_inc_num = cell_2_b_as_num + 1
+    cell_2_b_as_num_inc_num_str = CStr(cell_2_b_as_num_inc_num)
+    recombine_cell_ref = cell_2_a & cell_2_b_as_num_inc_num_str
+    Range(recombine_cell_ref).Select
+    Range("A1") = "From:"
+    Range("B1") = live_cell
+    Range("A2") = "New Current Cell:"
+    Range("B2") = recombine_cell_ref
+    Columns("A:A").EntireColumn.AutoFit
+    
+End Sub
