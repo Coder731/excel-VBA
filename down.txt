@@ -6,7 +6,7 @@ Sub down()
     
     cell_2_a = Left(live_cell, 3)
     
-    cell_2_b = Right(live_cell, 1)
+    cell_2_b = ActiveCell.Row
     
     
     cell_2_b_as_num = CLng(cell_2_b)
