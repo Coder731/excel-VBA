@@ -25,3 +25,4 @@ only works on single digit rows currently
 [integer to string](https://stackoverflow.com/questions/11595226/how-do-i-convert-an-integer-to-a-string-in-excel-vba)
 [vba active cell](https://www.educba.com/vba-active-cell/)
 [get selected rows](https://www.excelvbasolutions.com/2021/03/get-selected-rows-using-vba-macro.html)
+[VBA – Get the Active Cell’s Column or Row](https://www.automateexcel.com/vba/activecell-row-column/)
