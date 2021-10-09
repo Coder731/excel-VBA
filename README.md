@@ -15,6 +15,11 @@ was only working on single digit rows
         instead of:
         Right(live_cell, 1)
 
+## Development
+active cell
+    - down.txt has module to move active cell down by 1
+    - up.txt has module to move active cell up by 1
+
 ## References
 ### Export VBA
 [How can I export VBA code to text from de modules?](https://stackoverflow.com/questions/58490045/how-can-i-export-vba-code-to-text-from-de-modules#58490363)
