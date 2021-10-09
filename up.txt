@@ -1,0 +1,33 @@
+Sub up()
+    
+    ' live_cell shows current cell
+    live_cell = ActiveCell.Address
+
+    ' cell_2_a is Left 3 letters - unneeded?
+    cell_2_a = Left(live_cell, 3)
+    
+    ' cell_2_b is Row Number
+    cell_2_b = ActiveCell.Row
+    
+    ' convert row number as string to long form NUMBER
+    cell_2_b_as_num = CLng(cell_2_b)
+    
+    ' INC NUM by one, save as new variable
+    cell_2_b_as_num_inc_num = cell_2_b_as_num - 1
+    
+    ' convert to string
+    cell_2_b_as_num_inc_num_str = CStr(cell_2_b_as_num_inc_num)
+    
+    ' concatenate number to left three letters
+    recombine_cell_ref = cell_2_a & cell_2_b_as_num_inc_num_str
+    
+    ' select new cell   - CHANGE
+    Range(recombine_cell_ref).Select
+    
+    Range("A1") = "From:"
+    Range("B1") = live_cell
+    Range("A2") = "New Current Cell:"
+    Range("B2") = recombine_cell_ref
+    Columns("A:A").EntireColumn.AutoFit
+
+End Sub
